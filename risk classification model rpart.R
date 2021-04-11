@@ -88,13 +88,13 @@ printcp(r1)
 plot(r1, uniform = TRUE, margin = 0.1, branch = 0.5,compress = TRUE)
 text(r1, use.n=T)
 
-## explortatory analysis ##
 grouping<-r1$where
 newfit<-survfit(Surv(TTE.Local.Failure, status)~factor(grouping), data=data5)
 plot(newfit, mark.time=F, col=2:4)
 title(main="Kaplan Meier curves for pruned tree", xlab='Time to event',ylab='Probablity of freedom from local failure')
 legend(160,.37, legend=paste('node',1: 3), lty=1, col=2:4)
 
+## explortatory analysis ##
 
 ###################
 ## random forest ##
